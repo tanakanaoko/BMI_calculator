@@ -18,12 +18,23 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        textLabel.text = ""
     }
     
     func calculateBMI(height: Double, weight: Double) -> Double {
         return weight/(height*height)
     }
+    
+    func checkIfFat(bmi: Double) {
+        if bmi < 18.0 {
+            textLabel.text = "すごく痩せていますね"
+        } else if bmi > 18.0 && bmi < 25.0 {
+            textLabel.text = "標準体型ですね"
+        } else {
+            textLabel.text = "肥満体型ですね"
+        }
+    }
+        
 
     @IBAction func botton_tapped(_ sender: Any) {
         let heightText = heightTextgField.text
@@ -36,6 +47,7 @@ class ViewController: UIViewController {
         if let heightDouble = Double(height), let weightDouble = Double(weight) {
             let bmi = calculateBMI(height: heightDouble, weight: weightDouble)
             bmiLabel.text = "BMI \(Int(bmi))"
+            checkIfFat(bmi: bmi)
         }
     }
     
