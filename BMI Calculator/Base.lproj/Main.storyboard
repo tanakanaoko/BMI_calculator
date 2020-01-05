@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,88 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BMI_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMI計算機" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doA-Wm-ZE9">
+                                <rect key="frame" x="166" y="99" width="82" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJj-Dk-8MV">
+                                <rect key="frame" x="20" y="456" width="374" height="30"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="ボタン"/>
+                                <connections>
+                                    <action selector="botton_tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QsV-BG-doD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ここに文字が表示されます" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6UH-Ge-Lye">
+                                <rect key="frame" x="83" y="406" width="249" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="o1n-B6-Pa0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ここに文字を入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ze0-QO-12U">
+                                <rect key="frame" x="20" y="151" width="374" height="34"/>
+                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2dX-15-lj3">
+                                <rect key="frame" x="20" y="203" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BMI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4HO-dH-odw">
+                                <rect key="frame" x="186" y="349" width="61" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lJj-Dk-8MV" secondAttribute="bottom" constant="350" id="2SF-MG-m0G"/>
+                            <constraint firstItem="2dX-15-lj3" firstAttribute="centerX" secondItem="Ze0-QO-12U" secondAttribute="centerX" id="4DK-G6-h9L"/>
+                            <constraint firstItem="2dX-15-lj3" firstAttribute="width" secondItem="Ze0-QO-12U" secondAttribute="width" id="BKY-pn-V59"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lJj-Dk-8MV" secondAttribute="trailing" constant="20" id="CCe-Oa-kaP"/>
+                            <constraint firstItem="Ze0-QO-12U" firstAttribute="top" secondItem="doA-Wm-ZE9" secondAttribute="bottom" constant="31.5" id="POR-Da-KLz"/>
+                            <constraint firstItem="doA-Wm-ZE9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SMy-BY-44i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lJj-Dk-8MV" secondAttribute="bottom" constant="376" id="VKt-Wl-Elg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lJj-Dk-8MV" secondAttribute="trailing" constant="20" id="Vtf-zz-JQX"/>
+                            <constraint firstItem="2dX-15-lj3" firstAttribute="width" secondItem="Ze0-QO-12U" secondAttribute="width" id="Xhe-WZ-5Ap"/>
+                            <constraint firstItem="2dX-15-lj3" firstAttribute="top" secondItem="Ze0-QO-12U" secondAttribute="bottom" constant="18" id="cgY-kU-eih"/>
+                            <constraint firstItem="2dX-15-lj3" firstAttribute="top" secondItem="Ze0-QO-12U" secondAttribute="bottom" constant="18" id="evW-i6-lfm"/>
+                            <constraint firstItem="lJj-Dk-8MV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jF8-9Q-6zc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ze0-QO-12U" secondAttribute="trailing" constant="20" id="jmw-Vr-Z6C"/>
+                            <constraint firstItem="doA-Wm-ZE9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pno-D3-aTQ"/>
+                            <constraint firstItem="lJj-Dk-8MV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qyM-GO-95Q"/>
+                            <constraint firstItem="6UH-Ge-Lye" firstAttribute="centerX" secondItem="lJj-Dk-8MV" secondAttribute="centerX" id="uv2-Wt-auS"/>
+                            <constraint firstItem="Ze0-QO-12U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="uxr-It-LzT"/>
+                            <constraint firstItem="lJj-Dk-8MV" firstAttribute="top" secondItem="6UH-Ge-Lye" secondAttribute="bottom" constant="22" id="vXY-lo-xIY"/>
+                            <constraint firstItem="doA-Wm-ZE9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="vam-Y6-yzq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="lJj-Dk-8MV" id="RiW-Ct-S2C"/>
+                        <outlet property="heightTextgField" destination="Ze0-QO-12U" id="hM7-oI-Se2"/>
+                        <outlet property="textLabel" destination="6UH-Ge-Lye" id="ZF9-4F-1Ks"/>
+                        <outlet property="weightTextField" destination="2dX-15-lj3" id="f82-fV-a7d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
     </scenes>
 </document>
