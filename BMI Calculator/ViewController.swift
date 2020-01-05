@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var heightTextgField: UITextField!
+    @IBOutlet weak var bmiLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +35,7 @@ class ViewController: UIViewController {
         
         if let heightDouble = Double(height), let weightDouble = Double(weight) {
             let bmi = calculateBMI(height: heightDouble, weight: weightDouble)
-            print(bmi)
+            bmiLabel.text = "BMI \(Int(bmi))"
         }
     }
     

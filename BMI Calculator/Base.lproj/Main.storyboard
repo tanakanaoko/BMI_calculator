@@ -30,8 +30,8 @@
                                     <action selector="botton_tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QsV-BG-doD"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ここに文字が表示されます" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6UH-Ge-Lye">
-                                <rect key="frame" x="83" y="406" width="249" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ここに文字が表示されます" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6UH-Ge-Lye">
+                                <rect key="frame" x="84.5" y="413" width="245" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="o1n-B6-Pa0"/>
                                 </constraints>
@@ -39,20 +39,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ここに文字を入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ze0-QO-12U">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="身長（m）" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ze0-QO-12U">
                                 <rect key="frame" x="20" y="151" width="374" height="34"/>
-                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2dX-15-lj3">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="体重（kg）" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2dX-15-lj3">
                                 <rect key="frame" x="20" y="203" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BMI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4HO-dH-odw">
-                                <rect key="frame" x="186" y="349" width="61" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたのBMIは？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4HO-dH-odw">
+                                <rect key="frame" x="67.5" y="362" width="279" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -61,6 +59,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lJj-Dk-8MV" secondAttribute="bottom" constant="350" id="2SF-MG-m0G"/>
+                            <constraint firstItem="6UH-Ge-Lye" firstAttribute="top" secondItem="4HO-dH-odw" secondAttribute="bottom" constant="8" id="2at-EJ-Yj8"/>
                             <constraint firstItem="2dX-15-lj3" firstAttribute="centerX" secondItem="Ze0-QO-12U" secondAttribute="centerX" id="4DK-G6-h9L"/>
                             <constraint firstItem="2dX-15-lj3" firstAttribute="width" secondItem="Ze0-QO-12U" secondAttribute="width" id="BKY-pn-V59"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lJj-Dk-8MV" secondAttribute="trailing" constant="20" id="CCe-Oa-kaP"/>
@@ -69,6 +68,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lJj-Dk-8MV" secondAttribute="bottom" constant="376" id="VKt-Wl-Elg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lJj-Dk-8MV" secondAttribute="trailing" constant="20" id="Vtf-zz-JQX"/>
                             <constraint firstItem="2dX-15-lj3" firstAttribute="width" secondItem="Ze0-QO-12U" secondAttribute="width" id="Xhe-WZ-5Ap"/>
+                            <constraint firstItem="4HO-dH-odw" firstAttribute="centerX" secondItem="6UH-Ge-Lye" secondAttribute="centerX" id="bXr-2f-REj"/>
                             <constraint firstItem="2dX-15-lj3" firstAttribute="top" secondItem="Ze0-QO-12U" secondAttribute="bottom" constant="18" id="cgY-kU-eih"/>
                             <constraint firstItem="2dX-15-lj3" firstAttribute="top" secondItem="Ze0-QO-12U" secondAttribute="bottom" constant="18" id="evW-i6-lfm"/>
                             <constraint firstItem="lJj-Dk-8MV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jF8-9Q-6zc"/>
@@ -83,6 +83,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="bmiLabel" destination="4HO-dH-odw" id="2yz-E3-IC5"/>
                         <outlet property="button" destination="lJj-Dk-8MV" id="RiW-Ct-S2C"/>
                         <outlet property="heightTextgField" destination="Ze0-QO-12U" id="hM7-oI-Se2"/>
                         <outlet property="textLabel" destination="6UH-Ge-Lye" id="ZF9-4F-1Ks"/>
